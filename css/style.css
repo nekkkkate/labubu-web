@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background-color: #fef7ff;
+    color: #333;
+    padding: 0 1rem;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: "Amatic SC", cursive;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    color: #fbeeff;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(172, 86, 179, 0.3);
+}
+
+h2 {
+    color: #f9a3ff;
+    font-size: 2.5rem;
+    border-bottom: 2px dashed #d79bdc;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #e274e8;
+}
+
+header {
+    background:
+            linear-gradient(135deg, rgba(243, 141, 255, 0), rgba(236, 107, 172, 0)),
+            url('../gif/sky.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav a:hover {
+    background-color: white;
+    color: #e274e8;
+    text-decoration: underline;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+main {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    border: 1px solid #fbd1ff;
+}
+
+footer {
+    background: linear-gradient(135deg, #bdddff, #ffa1c5, #f2b9fb, #ffe8ad);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 15px 15px 0 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .hero-text {
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .gallery-container {
+        gap: 2rem;
+    }
+
+    .gallery-item {
+        width: 350px;
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 1.2rem;
+        max-width: 2000px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .main-hero-image {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .hero-section {
+        padding: 1rem 0;
+    }
+}
+
+header {
+    background:
+            linear-gradient(135deg, rgba(243, 141, 255, 0), rgba(236, 107, 172, 0)),
+            url('../gif/sky.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Добавляем sticky */
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+}

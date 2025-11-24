@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header>
+    <h1>Labubu — Корзина</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="collections.html">Мир милейших созданий!!</a></li>
+            <li><a href="gallery.html">Вдохновение!</a></li>
+            <li><a href="about.html">Свяжитесь с нами</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Ваша корзина</h2>
+    <div id="cart"></div>
+
+    <div id="cart-total" style="display: none;">
+        <div class="cart-total">
+            <h3>Итого: <span id="total-count">0</span> товаров</h3>
+            <div class="cart-actions">
+                <button class="btn btn-outline" onclick="clearCart()">
+                    <img src="gif/octopus.gif" alt="Удалить всё" class="delete-gif">
+                    Удалить всё
+                </button>
+                <button class="btn" onclick="placeOrder()">
+                    <img src="gif/star.gif" alt="Заказать" class="star-gif">
+                    Заказать
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-suggestions">
+        <div class="suggestion-buttons">
+            <a href="collections.html" class="btn btn-outline">
+                <img src="gif/bear.gif" alt="Коллекции" class="suggestion-gif">
+                Посмотреть ещё коллекции
+            </a>
+            <a href="gallery.html" class="btn btn-outline">
+                <img src="gif/cute.gif" alt="Вдохновиться" class="suggestion-gif">
+                Вдохновиться
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Labubu ждут встречи с вами:)</p>
+</footer>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div class="modal-caption" id="modal-caption"></div>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

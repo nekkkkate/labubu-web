@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Labubu — Аккаунт</title>
+    <meta name="description" content="Страница аккаунта Labubu: личная информация и история заказов.">
+    <meta name="keywords" content="Labubu, аккаунт, заказы, личные данные, корзина">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header>
+    <h1>Labubu — Аккаунт</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="collections.html">Мир милейших созданий!!</a></li>
+            <li><a href="gallery.html">Вдохновение!</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Информация об аккаунте</h2>
+        <article id="info" class="account-info">
+            <div class="account-data">
+                <p><strong>Имя:</strong> <span id="user-name">Екатерина</span></p>
+                <p><strong>Email:</strong> <span id="user-email">labubumail@yandex.ru</span></p>
+            </div>
+            <div class="account-actions">
+                <button class="btn btn-medium btn-outline" onclick="editAccount()">
+                    <img src="gif/pen.gif" alt="Редактировать" class="action-gif">
+                    Редактировать
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>История заказов</h2>
+        <div class="orders-header">
+            <button class="btn btn-medium btn-outline" onclick="clearOrderHistory()" id="clear-history-btn" style="display: none;">
+                <img src="gif/trash.gif" alt="Очистить историю" class="action-gif">
+                Очистить историю
+            </button>
+        </div>
+        <article id="orders">
+        </article>
+    </section>
+</main>
+
+<aside>
+    <h3>Подсказка</h3>
+    <p>Если история заказов пуста — добавьте товар в корзину, а затем оформите заказ!</p>
+</aside>
+
+<footer>
+    <p>&copy; 2025 Labubu ждут встречи с вами:)</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/account.js"></script>
+<script>
+    window.onload = function() {
+        loadUserData();
+        loadAccount();
+    }
+</script>
+
+</body>
+</html>

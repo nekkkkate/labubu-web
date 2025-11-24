@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Labubu — Коллекции</title>
+    <meta name="description" content="Коллекции милейших созданий Labubu. Добавляйте понравившиеся наборы в корзину.">
+    <meta name="keywords" content="Labubu, коллекции, игрушки, корзина, магазин">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header>
+    <h1>Labubu — Коллекции</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="collections.html">Мир милейших созданий!!</a></li>
+            <li><a href="gallery.html">Вдохновение!</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Наши коллекции</h2>
+
+        <div class="collections-list">
+            <article class="collection-item">
+                <div class="collection-image" onclick="openModal('images/allLabubuCollections/1.jpg', 'Коллекция №1')">
+                    <img src="images/allLabubuCollections/1.jpg" alt="Labubu коллекция 1">
+                </div>
+                <div class="collection-info">
+                    <h3>Коллекция №1 - "Волшебный лес"</h3>
+                    <p>Очаровательные лесные жители с магическими способностями. Каждая игрушка уникальна и хранит свою историю.</p>
+                    <div class="collection-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection1', -1)">−</button>
+                            <span class="quantity-display" id="qty-display-collection1">1</span>
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection1', 1)">+</button>
+                        </div>
+                        <button class="btn btn-small" onclick="addToStorage('collection1', 'images/allLabubuCollections/1.jpg')">
+                            <img src="gif/labubu-cart.gif" alt="Добавить в корзину" class="cart-gif">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="collection-item">
+                <div class="collection-image" onclick="openModal('images/allLabubuCollections/2.jpg', 'Коллекция №2')">
+                    <img src="images/allLabubuCollections/2.jpg" alt="Labubu коллекция 2">
+                </div>
+                <div class="collection-info">
+                    <h3>Коллекция №2 - "Космические исследователи"</h3>
+                    <p>Отважные путешественники далёких галактик. Готовы к межзвёздным приключениям вместе с вами!</p>
+                    <div class="collection-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection2', -1)">−</button>
+                            <span class="quantity-display" id="qty-display-collection2">1</span>
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection2', 1)">+</button>
+                        </div>
+                        <button class="btn btn-small" onclick="addToStorage('collection2', 'images/allLabubuCollections/2.jpg')">
+                            <img src="gif/labubu-cart.gif" alt="Добавить в корзину" class="cart-gif">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="collection-item">
+                <div class="collection-image" onclick="openModal('images/allLabubuCollections/3.jpg', 'Коллекция №3')">
+                    <img src="images/allLabubuCollections/3.jpg" alt="Labubu коллекция 3">
+                </div>
+                <div class="collection-info">
+                    <h3>Коллекция №3 - "Сладкие мечты"</h3>
+                    <p>Милые создания из мира сладостей и конфет. Поднимут настроение даже в самый хмурый день.</p>
+                    <div class="collection-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection3', -1)">−</button>
+                            <span class="quantity-display" id="qty-display-collection3">1</span>
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection3', 1)">+</button>
+                        </div>
+                        <button class="btn btn-small" onclick="addToStorage('collection3', 'images/allLabubuCollections/3.jpg')">
+                            <img src="gif/labubu-cart.gif" alt="Добавить в корзину" class="cart-gif">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="collection-item">
+                <div class="collection-image" onclick="openModal('images/allLabubuCollections/4.jpg', 'Коллекция №4')">
+                    <img src="images/allLabubuCollections/4.jpg" alt="Labubu коллекция 4">
+                </div>
+                <div class="collection-info">
+                    <h3>Коллекция №4 - "Морские глубины"</h3>
+                    <p>Таинственные обитатели океана с яркими цветами и загадочными историями.</p>
+                    <div class="collection-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection4', -1)">−</button>
+                            <span class="quantity-display" id="qty-display-collection4">1</span>
+                            <button class="quantity-btn" onclick="updateCollectionQuantity('collection4', 1)">+</button>
+                        </div>
+                        <button class="btn btn-small" onclick="addToStorage('collection4', 'images/allLabubuCollections/4.jpg')">
+                            <img src="gif/labubu-cart.gif" alt="Добавить в корзину" class="cart-gif">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div class="modal-caption" id="modal-caption"></div>
+</div>
+
+<script src="js/collections.js"></script>
+<script src="js/main.js"></script>
+
+<footer>
+    <p>&copy; 2025 Labubu ждут встречи с вами:)</p>
+</footer>
+
+</body>
+</html>

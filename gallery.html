@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Галерея для вдохновения!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header>
+    <h1>Labubu</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="collections.html">Мир милейших созданий!!</a></li>
+            <li><a href="gallery.html">Вдохновение!</a></li>
+            <li><a href="about.html">Свяжитесь с нами</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Галерея милых картинок</h2>
+
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openGalleryModal(0)">
+            <img src="images/collection/boo.jpg" alt="соблюдайте осторожность!!">
+            <div class="gallery-caption">испугались??</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(1)">
+            <img src="images/collection/cuteBoy.jpg" alt="милашка лабубу">
+            <div class="gallery-caption">ну какой же он милый!</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(2)">
+            <img src="images/collection/donuldDuck.jpg" alt="стилизуем как в мультиках из нашего детства!">
+            <div class="gallery-caption">мистер Дональд Дак?!</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(3)">
+            <img src="images/collection/dreamTeam.jpg" alt="мечта каждого">
+            <div class="gallery-caption">не лукавьте - так выглядит счастье:)</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(4)">
+            <img src="images/collection/genksta.jpg" alt="лабубу только кажутся милыми....">
+            <div class="gallery-caption">такое только в кошмарах приснится..</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(5)">
+            <img src="images/collection/intelligence.jpg" alt="и среди лабуб есть аристократы!">
+            <div class="gallery-caption">подайте ему чай!</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(6)">
+            <img src="images/collection/miumiucor.jpg" alt="для самых стильных:)">
+            <div class="gallery-caption">как насчет парных образов с вашей лабубой?</div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal(7)">
+            <img src="images/collection/photographer.jpg" alt="творческая лабуба!">
+            <div class="gallery-caption">улыбнитесь!</div>
+        </div>
+    </div>
+</main>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <button class="modal-nav prev" onclick="changeImage(-1)">❮</button>
+    <button class="modal-nav next" onclick="changeImage(1)">❯</button>
+    <div class="modal-counter" id="modal-counter"></div>
+    <img class="modal-content" id="modal-img">
+    <div class="modal-caption" id="modal-caption"></div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Labubu ждут встречи с вами:)</p>
+</footer>
+
+<script src="js/gallery.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

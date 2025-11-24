@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Labubu — Отзывы</title>
+    <meta name="description" content="Отзывы наших клиентов о коллекциях Labubu">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header>
+    <h1>Labubu — Отзывы</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="collections.html">Мир милейших созданий!!</a></li>
+            <li><a href="gallery.html">Вдохновение!</a></li>
+            <li><a href="about.html">Свяжитесь с нами</a></li>
+            <li><a href="account.html">Аккаунт</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="add-review-section">
+        <h2>Поделитесь вашими эмоциями!</h2>
+        <div class="add-review-form">
+            <div class="form-group">
+                <input type="text" id="review-name" placeholder="Ваше имя" class="form-input">
+            </div>
+            <div class="form-group">
+                <textarea id="review-text" placeholder="Расскажите о вашем опыте с Labubu..." class="form-textarea" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="rating-input">
+                    <span>Оценка:</span>
+                    <div class="stars-selector">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                    <span id="rating-value">5</span>
+                </div>
+            </div>
+            <button class="btn" id="submit-review-btn">
+                <img src="gif/send.gif" alt="Отправить" class="action-gif">
+                Опубликовать отзыв
+            </button>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>Что говорят наши клиенты</h2>
+        <p>Наши коллекции Labubu дарят радость по всему миру! Вот что пишут счастливые обладатели:</p>
+
+        <div class="reviews-controls">
+            <button class="btn" id="load-reviews-btn">
+                <img src="gif/refresh.gif" alt="Обновить" class="action-gif">
+                Загрузить новые отзывы
+            </button>
+            <button class="btn btn-outline" id="filter-reviews-btn">
+                <img src="gif/filter.gif" alt="Фильтр" class="action-gif">
+                Случайные отзывы
+            </button>
+        </div>
+
+        <div id="reviews-preloader" class="preloader" style="display: none;">
+            <div class="preloader-content">
+                <img src="gif/loading.gif" alt="Загрузка" class="preloader-gif">
+                <p>Загружаем отзывы...</p>
+            </div>
+        </div>
+
+        <div id="reviews-container" class="reviews-container">
+        </div>
+
+        <div id="reviews-error" class="error-message" style="display: none;">
+            <div class="error-content">
+                <img src="gif/error.gif" alt="Ошибка" class="error-gif">
+                <h3>Упс! Что-то пошло не так</h3>
+                <p id="error-text">Не удалось загрузить отзывы. Попробуйте позже.</p>
+                <button class="btn btn-outline" onclick="loadReviews()">Попробовать снова</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<template id="review-template">
+    <article class="review-card">
+        <div class="review-header">
+            <img class="review-avatar" src="" alt="Аватар">
+            <div class="review-user">
+                <h3 class="review-name"></h3>
+                <span class="review-email"></span>
+            </div>
+        </div>
+        <div class="review-content">
+            <p class="review-text"></p>
+        </div>
+        <div class="review-footer">
+            <span class="review-rating">
+            </span>
+            <span class="review-date"></span>
+        </div>
+    </article>
+</template>
+
+<footer>
+    <p>Labubu — мир милых созданий, которые дарят радость!</p>
+    <p>&copy; 2025 Labubu ждут встречи с вами:)</p>
+</footer>
+
+<script src="js/reviews.js"></script>
+</body>
+</html>
